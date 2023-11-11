@@ -91,15 +91,11 @@ html, body{
     font-weight: 600;
 }
 
-.feedback-text{
-    display: none;
-}
-
 .btn-submit:hover{
     opacity: 80%;
 }
 
-.remember-me{
+.link-section{
     font-size: 1.6rem;
     font-weight: 600;
     color: var(--clr-gray-1);

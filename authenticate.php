@@ -1,10 +1,13 @@
 <?php
 session_start();
+if (!isset($_SESSION['signed_in']) || ($_SESSION['signed_in']) !== true) {
+    header("Location: signin.php");
+    exit();
+}
 
-// Kiểm tra xem người dùng đã đăng nhập hay chưa
-if (!isset($_SESSION['logged_in']) || ($_SESSION['logged_in']) !== true) {
-    // Nếu chưa đăng nhập, chuyển hướng về trang đăng nhập
-    header("Location: signin.html");
+if(isset($_POST["sign_out"])){
+    $_SESSION["signed_in"] = false;
+    header('Location: signin.php');
     exit();
 }
 ?>

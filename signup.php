@@ -16,7 +16,7 @@
     <body>
         <div class="wrapper">
             <div class="container text-center">
-                <div class="row h-100">
+                <div class="form-section row h-100">
                     <div class="col-md-5 d-none d-lg-block pannel-left">
                         <img
                             src="./asset/img/Group 1.png"
@@ -27,7 +27,7 @@
                     </div>
                     <div class="col-md-7 d-flex align-items-center">
                         <form
-                            action=""
+                            action="./signup.php"
                             class="w-100 form-wrapper needs-validation"
                             method="post"
                         >
@@ -45,58 +45,63 @@
                                 />
                             </div>
                             <div class="form-group position-relative m-5">
-                                <label for="username" class="form-label"
+                                <label for="email" class="form-label"
                                     >Email</label
                                 >
                                 <input
                                     type="email"
                                     class="input"
-                                    id="username"
-                                    name="username"
-                                    validation
-                                />
-                            </div>
-                            <div class="form-group position-relative m-5">
-                                <label for="username" class="form-label"
-                                    >Password</label
-                                >
-                                <input
-                                    type="password"
-                                    class="input"
-                                    id="username"
-                                    name="username"
+                                    id="email"
+                                    name="email"
                                     validation
                                 />
                             </div>
                             <div class="form-group position-relative m-5">
                                 <label for="password" class="form-label"
+                                    >Password</label
+                                >
+                                <input
+                                    type="password"
+                                    class="input"
+                                    id="password"
+                                    name="password"
+                                    validation
+                                />
+                            </div>
+                            <div class="form-group position-relative m-5">
+                                <label for="confirm-password" class="form-label"
                                     >Confirm Password</label
                                 >
                                 <input
                                     type="password"
-                                    id="password"
-                                    name="password"
+                                    id="confirm-password"
+                                    name="confirm-password"
                                     class="input"
                                 />
                             </div>
                             
-                            <div class="remember-me d-flex align-items-center mx-5 my-4">
-                                <input type="checkbox" name="remember-me" id="remember-me">
-                                <label for="remember-me" class="remember-me ps-3">Accept term & conditions</label>
+                            <div class="link-section d-flex align-items-center justify-content-between mx-5 my-4">
+                                <div>
+                                    <input type="checkbox" name="accpept-term" id="accpept-term">
+                                    <a href="./term.html" for="accpept-term" class="link-section accpept-term ps-3">Accept term & conditions</a>
+                                </div>
+                                <a href="./signin.html">I have a account</a>
                             </div>
-                            <!-- <p
-                                class="text-start mx-5 mt-4 mb-lg-5 feedback-text"
-                            >
-                                &#x2716; Tài khoản hoặc mật khẩu không chính xác
-                            </p> -->
                             <button type="submit" class="btn-submit px-5 mb-5">
                                 Sign Up
                             </button>
                         </form>
                     </div>
                 </div>
+                <!-- <div class="complete-section row h-100">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="./asset/img/complete.gif" alt="">
+                        <h1 class="ps-5">Đăng kí tài khoản thành công</h1>
+                    </div>
+                </div> -->
                 <span class="copyright-text"> &#169; 2023 sxnd</span>
             </div>
         </div>
     </body>
+    <script src="./checkSignup.js"></script>
 </html>

@@ -1,7 +1,7 @@
-<?php
-    include('./authenticate.php');
+<?php 
+    // session_start();
+    include("./authenticate.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,5 +11,8 @@
 </head>
 <body>
     <h1>Đây là trang chính</h1>
+    <form action="authenticate.php" method="post">
+        <input type="submit" name="sign_out" value="Đăng xuất">
+    </form>
 </body>
 </html>
