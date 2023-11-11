@@ -39,12 +39,12 @@
                                 <input type="checkbox" name="remember-me" id="remember-me">
                                 <label for="remember-me" class="link-section ps-3">Remember me</label>
                             </div>
-                            <a href="./signup.html" class="">Create new account</a>
+                            <a href="./signup.php" class="">Create new account</a>
                         </div>
                         <p class="text-start mx-5 my-4 feedback-text" name="signinError">
                             <?php
                                 if(isset($_SESSION["signin_error"])){
-                                    echo "&#x2716; Tài khoản mật khẩu không chính xác";
+                                    echo "&#x2716; Invalid email or password";
                                     unset($_SESSION["signin_error"]);
                                 }
                             ?>
