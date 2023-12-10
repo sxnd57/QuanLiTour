@@ -1,15 +1,10 @@
 <?php
 
 $servername = "localhost";
-$username = "admin";
+$username = "root";
 $password = "123456";
-$dbname = "sinhvien";
-$port = 3307;
+$dbname = "tour";
+$port = 3306;
 
 $conn = new mysqli($servername, $username, $password, $dbname, $port);
-
-if ($conn->connect_error) {
-    die("Kết nối không thành công: " . $conn->connect_error);
-}
-
 ?>

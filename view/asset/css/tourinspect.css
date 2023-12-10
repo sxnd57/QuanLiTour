@@ -1,0 +1,100 @@
+.wrapper{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tourist-type {
+    font-size: 12px;
+    color: rgba(2, 100, 200, 1);
+    background-color: rgb(187, 218, 236);
+    font-weight: bold;
+}
+
+.tourist-nation{
+    color: #747171;
+}
+
+.image-frame{
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: 7fr 3fr;
+    padding: 30px 0;
+}
+
+.frame{
+    height: 460px;
+    width: auto;
+}
+
+.all-image{
+    position: relative;
+}
+
+.btn-all{
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.swiper {
+    border-radius: 10px;
+    width: 100%;
+    height: 50vh;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination{
+    color: #fff;
+}
+
+
+/* Container */
+.characteristic{
+    background-color: #f2f3f3;
+    color: #434343;
+}
+
+.image-content{
+    width: 450px;
+    height: 300px;
+}
+
+.map-address{
+    height: 155px;
+}
+
+.price-color{
+    color: rgba(255,94,31,1.00);
+}
+
+.btn-buy__sticket{
+    background-color: rgba(255,94,31,1.00);
+    font-size: 20px;
+    border: none;
+    color: #fff;
+    padding: 8px 0;
+}

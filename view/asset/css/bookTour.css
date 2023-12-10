@@ -1,0 +1,29 @@
+.fs-7{
+    font-size: 14px;
+}
+
+.fs-8{
+    font-size: 12px;
+}
+
+.icon__up,
+.icon__down{
+    color: rgb(1, 148, 243);
+}
+
+.show__price{
+    cursor: pointer;
+}
+
+.price{
+    color: #E93F15;
+}
+
+.btn-book__tour{
+    background-color: #E93F15;
+}
+
+.time__line-section{
+    background-color: #ccc;
+}
+
