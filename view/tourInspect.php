@@ -353,67 +353,81 @@
                     <div class="fw-bold fs-5">Có vé hôm nay</div>
                 </div>
             </div>
-            <div class="row">
-                <div class="container">
-                    <div class="row bg-white p-3 rounded-3 shadow">
-                        <div>
-                            <button class="text-white py-1 px-2 rounded-5 bg-primary fs-8">
-                                <i class="fa-solid fa-thumbs-up"></i>
-                                Lựa chọn của chúng tôi
-                            </button>
-                        </div>
-                        <div class="fs-6 fw-bold my-3">Vé Vào Cổng (Quét QR Code Vào Cổng Trực Tiếp)</div>
-                        <div class="px-4 py-3 bg-light">
-                            <div class="fs-6 fw-semibold text-secondary">
-                                <i class="fa-solid fa-calendar-days"></i>
-                                Sử dụng vào ngày đã chọn
-                            </div>
-                            <div class="fs-6 fw-semibold text-secondary text-success">
-                                <i class="fa-solid fa-phone-flip"></i>
-                                Không cần đặt chỗ trước
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="fs-6 fw-semibold text-secondary">
-                                    <i class="fa-solid fa-hand-holding-dollar"></i>
-                                    Không hoàn tiền
-                                </div>
-                                <div class="fs-5 fw-bold text-danger">893.355 VND</div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-end my-3">
-                            <button class="btn__choosen py-2 px-4 rounded-3 text-white fw-bold fs-7">Chọn</button>
-                            <button
-                                class="btn__cancel py-2 px-4 rounded-3 text-primary bg-light fw-bold fs-7">Hủy</button>
-                        </div>
-                        <div class="d-flex align-items-center px-3 py-4 border-top">
-                            <div class="datetimepicker px-5">
-                                <label for="datetimepicker" class="fw-semibold">Ngày tham gia</label>
-                                <input type="date" name="datetimepicker" id="datetimepicker">
-                            </div>
+            <?php
+            $sql = "SELECT * FROM find_ticket WHERE id_tour = $id";
+            $all_tour = $conn->query($sql);
 
-                            <div class="ticket__quantity d-flex align-items-center px-5 border-start">
-                                <i class="fa-solid fa-users"></i>
-                                <div class="px-3">
-                                    <label class="fs-6 fw-semibold">Áp dụng cho</label>
-                                    <div class="quantity__people fs-8">0 Adult</div>
+            while ($row = mysqli_fetch_assoc($all_tour)) {
+                ?>
+                <div class="row my-4">
+                    <div class="container">
+                        <div class="row bg-white p-3 rounded-3 shadow">
+                            <div>
+                                <button class="text-white py-1 px-2 rounded-5 bg-primary fs-8">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    Lựa chọn của chúng tôi
+                                </button>
+                            </div>
+                            <div class="fs-6 fw-bold my-3"><?php echo $row["name"]?></div>
+                            <div class="px-4 py-3 bg-light">
+                                <div class="fs-6 fw-semibold text-secondary">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    Sử dụng vào ngày đã chọn
                                 </div>
-                                <input type="number" name="" value="0"
-                                    class="quantity w-25 text-center border rounded-3 p-1">
-                                <div class="mx-5">
-                                    <div class="fs-8 text-secondary">Tổng giá tiền</div>
-                                    <div class="total__ticket fs-6 fw-bold">0 VND</div>
+                                <div class="fs-6 fw-semibold text-secondary text-success">
+                                    <i class="fa-solid fa-phone-flip"></i>
+                                    Không cần đặt chỗ trước
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="fs-6 fw-semibold text-secondary">
+                                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                                        Không hoàn tiền
+                                    </div>
+                                    <div class="fs-5 fw-bold text-danger"><?php echo divideVND($row["total_cost"]) ?> VND</div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end my-3">
+                                <button class="btn__choosen py-2 px-4 rounded-3 text-white fw-bold fs-7">Chọn</button>
+                                <button
+                                    class="btn__cancel py-2 px-4 rounded-3 text-primary bg-light fw-bold fs-7">Hủy</button>
+                            </div>
+                            <div class="d-flex align-items-center px-3 py-4 border-top">
+                                <!-- Datetime picker -->
+                                <div class="datetimepicker px-5">
+                                    <label for="datetimepicker" class="fw-semibold">Ngày tham gia</label>
+                                    <input type="date" name="datetimepicker" id="datetimepicker">
+                                </div>
+
+                                <!-- Ticket quantity -->
+                                <div class="ticket__quantity d-flex align-items-center px-5 border-start">
+                                    <i class="fa-solid fa-users"></i>
+                                    <div class="px-3">
+                                        <label class="fs-6 fw-semibold">Giá vé</label>
+                                        <div class="ticket__price fs-8" data-price="<?php echo $row["total_cost"]?>">
+                                            <?php echo divideVND($row["total_cost"])?> VND
+                                        </div>
+                                    </div>
+                                    <input type="number" name="" value="0"
+                                        class="quantity w-25 text-center border rounded-3 p-1">
+                                    <div class="mx-5">
+                                        <div class="fs-8 text-secondary">Tổng giá tiền</div>
+                                        <div class="total__ticket fs-6 fw-bold">0 VND</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <footer class="">
                 <?php
-                include './footer.php'
-                    ?>
-            </footer>
+            }
+            ?>
         </div>
+
+        <footer class="">
+            <?php
+            include './footer.php'
+                ?>
+        </footer>
 
 
 
