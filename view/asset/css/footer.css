@@ -90,9 +90,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-  li { list-style: none; }
-  
+    
   a { text-decoration: none; }
   
   a,
@@ -803,6 +801,10 @@
     background: hsla(0, 0%, 100%, 0.2);
   }
   
+  .list-style-none{
+    list-style: none;
+  }
+
   .footer-bottom-link {
     color: var(--gainsboro);
     font-size: var(--fs-7);

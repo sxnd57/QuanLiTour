@@ -92,15 +92,15 @@
 
           <ul class="footer-bottom-list">
 
-            <li>
+            <li class="list-style-none">
               <a href="#" class="footer-bottom-link">Privacy Policy</a>
             </li>
 
-            <li>
+            <li class="list-style-none">
               <a href="#" class="footer-bottom-link">Term & Condition</a>
             </li>
 
-            <li>
+            <li class="list-style-none">
               <a href="#" class="footer-bottom-link">FAQ</a>
             </li>
 

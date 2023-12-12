@@ -43,7 +43,7 @@
                     </div>
 
                     <!-- Info contact -->
-                    <form action="">
+                    <form action="" method="POST">
                         <div class="fs-5 fw-bold">
                             Thông tin liên hệ
                         </div>
@@ -117,14 +117,14 @@
                     <div class="row sticky-top py-3 shadow rounded-3 mt-3">
                         <div class="d-flex align-items-center border-bottom py-3 mb-2">
                             <img src="./asset/icons/activity.svg" alt="">
-                            <div class="fs-6">Tóm tắt đặt chỗ</div>
+                            <div class="fs-6 fw-bold ms-2">Tóm tắt đặt chỗ</div>
                         </div>
-                        <div class="fs-6 my-2">Sun World Ba Na Hills tại Đà Nẵng </div>
+                        <div class="fs-6 my-2 fw-semibold">Sun World Ba Na Hills tại Đà Nẵng </div>
                         <div class="d-flex align-items-center my-2" style="height: 90px;">
                             <img src="./asset/img/banahill.webp" class="w-100 h-100 rounded-3" alt="">
-                            <div class="fs-8 fw-semibold mx-1">Combo Vé Vào Cửa & Buffet Trưa - Nhà hàng Bốn Mùa
-                                (Quét
-                                Mã QR Vào Cửa Trực Tiếp) - Khách Quốc Tế</div>
+                            <div class="fs-8 fw-semibold ms-2">
+                                Combo Vé Vào Cửa & Buffet Trưa - Nhà hàng Bốn Mùa(Quét Mã QR Vào Cửa Trực Tiếp) - Khách Quốc Tế
+                            </div>
                         </div>
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center justify-content-between py-1">

@@ -1,6 +1,3 @@
-.wrapper{
-    background-color: rgba(0, 0, 0, 0.1);
-}
 
 .tourist-type {
     font-size: 12px;
@@ -67,8 +64,9 @@
     object-fit: cover;
 }
 
-.swiper-pagination{
-    color: #fff;
+.swiper-pagination-fraction{
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -91,10 +89,24 @@
     color: rgba(255,94,31,1.00);
 }
 
-.btn-buy__sticket{
+.btn-buy__ticketbox{
     background-color: rgba(255,94,31,1.00);
     font-size: 20px;
     border: none;
     color: #fff;
     padding: 8px 0;
+}
+
+.btn-buy__ticketbox:hover{
+    color: #fff;
+    background-color: rgba(255,94,31,0.8);
+}
+
+/* BOOK TICKETBOX */
+.btn__choosen{
+    background-color: var(--clr-orange);
+}
+
+.quantity__box{
+    width: 350px;
 }
